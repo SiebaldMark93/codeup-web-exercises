@@ -2,9 +2,331 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Functions Lecture</title>
 </head>
 <body>
-$END$
+
+<script>
+
+  "use strict";
+
+  /*
+      OUTLINE OF LECTURE EXAMPLES
+
+      Defining a Function (Declaration vs. Expression)
+
+      Calling / Invoking a Function
+
+      Return Statement
+
+      Return Value vs. Definition
+
+      Arguments and Parameters
+
+      !! Mini-exercises !!
+
+      Function Scope
+
+      Pure Functions and Side Effects
+
+      Higher Order Functions
+
+      IIFE
+
+  */
+
+  // ================ Defining a Function (Declaration vs. Expression)
+
+  /* Function Declaration...
+
+      function doSomething(OPTIONAL_PARAMETERS) {
+          // doing something...
+          return SOME_VALUE;
+      }
+
+  */
+
+  //var logSomeStuff = function () { (another way to use)
+
+  // function logSomeStuff() {
+  //     console.log('Hello');
+  //     console.log('Goodbye');
+  //}
+
+ //  logSomeStuff();
+
+  /* Function Expression
+
+      var someVariable = function(OPTIONAL_PARAMETERS) {
+          // do something
+          return SOME_VALUE;
+      };
+
+  */
+
+  // var logSomeStuff = function() {
+  //     console.log('Hello');
+  //     console.log('Goodbye');
+  // }
+
+  // ================ Calling / Invoking a Function
+
+  // logSomeStuff();
+
+  // ================ Return Statement
+
+  // function returnValue() {
+  //     return 5;
+  // }
+  //
+  // console.log(returnValue());
+
+  // var five = returnValue ();  (another way)
+
+
+  // ================ Return Value vs. Definition
+
+  // var x = returnValue();
+  // var y = returnValue;    (gives returnValue another name (y))
+
+  // ================ Arguments and Parameters
+
+  // defining a parameter
+
+  // function returnInput(input) {     // (input) is the parameter
+  //     return input;
+  // }
+  //
+  // console.log(returnInput(4));      // (4) is the argument
+  // console.log(returnInput(2));
+  // console.log(returnInput(false));
+  // console.log(returnInput('bob'));
+
+  // calling function without expected arguments/inputs
+     //you get back NaN
+  // console.log(returnInput());
+
+  // calling function with additional arguments/inputs
+
+  // console.log(returnInput(1, 2, 3));    //will only input the first number
+
+
+  // ================ Local Variables
+
+  // function addTwoToInput(input) {
+  //     var x = 2;
+  //     return x + input;
+  // }
+
+
+  // ================ !! Mini-exercises !!
+
+  // Write a function, returnFive, that returns the number five. No inputs should be defined.
+
+  // function returnFive() {
+  //   return 5;
+  // }
+
+  // console.log(returnFive());
+
+  // Write a function, isFive, that takes in an input and returns the boolean value true if the passed argument is the number 5 or the string "5". Return false otherwise.
+
+  // how many inputs should the function have? 1
+  // what are the data types for the inputs? any data type
+  // what is the data type of the output/return value? boolean
+
+  function isFive(input) {
+    return input == 5;        // second way is return input === 5 || input === '5';
+  }
+
+  console.log(isFive('5'), true);  //adding true is a great way to check your work
+  console.log(isFive(5), true);
+  console.log(isFive('zzz'), false);  //if they match in the console, you are right.
+  console.log(isFive(33), false);
+
+  // Write a function, isShortWord, that takes in a string and returns the boolean value true if the passed argument is shorter than 5 characters. Return false otherwise.
+
+  // how many inputs should the function have? 1
+  // what is the data type? string
+  // what is the return type? boolean
+
+  function isShortWord(stringInput) {
+    return stringInput.length < 5;
+  }
+
+  //expectations: test inputs and outputs
+  console.log(isShortWord('password'), false);
+  console.log(isShortWord('five'), true);
+  console.log(isShortWord(''), true);
+  console.log(isShortWord('232'), true);
+  console.log(isShortWord('aaa'), false);
+
+
+  // Write a function, isSameLength, that takes in two string inputs and returns the boolean value true if the passed arguments are the same length. Return false otherwise.
+
+  // how many inputs should the function have? 2
+  // what is the data type? strings
+  // what is the return type? boolean
+
+  function isSameLength(str1, str2) {
+    // create variable to store boolean comparing strings
+    var strsAreSameLength = str1.length === str2.length;
+    // return variable ouput
+    // return strsAreSameLength;
+
+    return str1.length === str2.length;
+  }
+
+  // Example Inputs/Output
+
+  console.log(isSameLength('cat', 'hat'), true);
+  console.log(isSameLength('dog', 'plane') false);
+  console.log(isSameLength('plane', 'dog') false);
+  console.log(isSameLength('   ', 'dog'), true);
+  console.log(isSameLength('', ''), true);
+
+  // Write a function, getSmallerSegment, that takes in a string and a number input.
+  //The function should return a substring of the first argument that is as many characters long as the second argument in lowercase.
+
+  // example input: getSmallerSegment("Codeup", 3)
+  // example output: "cod"
+
+  // getSmallerSegment('dog', 1) // return 'd'
+  // getSmallerSegment('Hello', 2) // return 'he'
+
+  //how many outputs? 2
+  // what type inputs? string and number
+  // what type of output? string
+
+  function getSmallerSegment(str, segmentLength) {
+    return str.substring(0, segmentLength).toLowerCase();
+  }
+
+// Test expectations with input/output
+
+  console.log(getSmallerSegment("Codeup", 3), "cod");
+  console.log(getSmallerSegment('dog', 1), 'd');
+  console.log(getSmallerSegment('Hello', 2), 'h');
+  console.log(getSmallerSegment('seventeen', 5), 'seven');
+
+
+  // ================ Function Scope
+
+  // Scope - where variables can be accessed in the code
+
+  // Three types of variable scope in JavaScript: 1. global scope / 2. function scope / 3. block scope
+
+  var x = 'Hello, I am a global variable';
+  //var x = 'hello' // dont add multiple same variables
+
+  // var is function-scoped
+
+  function localExample() {     //this is a local variable
+    var y = 'Local';
+    console.log(x);             //can access this global variable inside functions as well
+  }
+
+  localExample();
+
+  // var/let/const may be accessed in the global scope if declared outside a function
+
+  // const and let are block-scoped
+
+  // SCOPE EXAMPLE
+
+
+
+  // var keyword creates "Function Scope" variables
+
+  // var globalVar = "Look, I'm Global!"; // declare a global variable
+  //
+  // function scopeExample() {
+  //     var localVar = "Look, I'm Local!"; // declare a local variable
+  //     alert(localVar); // localVar is accessible here
+  //     alert(globalVar); // globalVar is accessible here
+
+  // }
+  //
+  // scopeExample();
+
+  // alert(localVar); // localVar is NOT accessible here and this will produce an error
+
+
+  // EXTRA SCOPE EXAMPLE
+
+  // var x = 300;
+  // var y = 100;
+  //
+  // function scopeExample2(x, y) {
+  //     var x = 1;
+  //     var y = 2;
+  //     console.log('x: ' + x + ' y: ' + y);
+  //     return x + y;
+  // }
+  //
+  // scopeExample2();
+  // console.log('x: ' + x + ' y: ' + y);
+
+
+  // ================ Pure Functions and Side Effects
+
+
+
+
+  // pure functions do not use any external data or cause side effects
+  // pure functions ALWAYS return the same output given the same input
+  // use pure functions over impure functions wherever possible
+
+
+
+  // // function with side effects
+  // var word = "hello";
+  //
+  // function shoutWord() {
+  //     return word.toLocaleUpperCase();
+  // }
+  //
+  // // pure function
+  // function shoutWord(word) {
+  //     return word.toLocaleUpperCase();
+  // }
+  //
+  //
+  // // function with side effects
+  // var startCount = 1;
+  //
+  // function count() {
+  //     return ++count;
+  // }
+  //
+  // // pure function
+  // function count(startCount) {
+  //     return ++startCount;
+  // }
+
+  // ================ Higher Order Functions
+
+  // function returnFive() {
+  //     return 5;
+  // }
+  // addTwo is a "Higher Order Function" because it takes in other functions as arguments
+  // functions that return a function are also "Higher Order Functions"
+  // function addTwo(number) {
+  //     return number() + 2;
+  // }
+  //
+  // console.log(addTwo(returnFive)); // Callback function "returnFive" is passed to addTwo
+
+  // console.log(addTwo(function() { // Anon function passed to addTwo()
+  //     return 10;
+  // }))
+
+  // other common higher order functions built in to JS: setInterval, setTimeout, map, filter, reduce, fetch
+
+  // ================ IIFE
+
+  // See additional example
+
+</script>
 </body>
 </html>
