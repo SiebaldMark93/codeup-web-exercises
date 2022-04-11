@@ -23,34 +23,78 @@
      * console.logging the function's return value
      */
 
-    function analyzeColor(color) {
-        if (color === 'blue') {
-            console.log('blue is the color of the sky.');
-        } else if (color === 'red') {
-            console.log('Strawberries are red.');
-        }
-    }
+    //function analyzeColor(color) {
+    //    if (color === 'blue') {
+    //        return('blue is the color of the sky.');
+    //    } else if (color === 'red') {
+    //        return('Strawberries are red.');
+    //    } else if (color === 'cyan') {
+    //        return('I dont know anything about cyan');
+    //    }
+    //}
 
-    console.log(analyzeColor('blue'));
-    console.log(analyzeColor('red'));
+    //console.log(analyzeColor('blue'));
+    //console.log(analyzeColor('red'));
+    //console.log(analyzeColor('cyan'));
+
 
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-    var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+   // var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+   // var randomColor = colors[Math.floor(Math.random() * colors.length)];
     /**
      * TODO:
      * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
      * You should see a different message every time you refresh the page
      */
 
+    //function analyzeColor(colors) {
+    //    if (colors === randomColor) {
+    //        return randomColor;
+    //    }
+    //}
+
+    //console.log(analyzeColor(randomColor));
+
+
     /**
      * TODO:
      * Comment out the code above, and refactor your function to use a switch-case statement
      */
+
+    //var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    //var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+    //function analyzeColor(colors) {
+    //    switch (colors) {
+    //        case 'red':
+    //            console.log('red');
+    //            break;
+    //        case 'orange':
+    //            console.log('orange');
+    //            break;
+    //        case 'yellow':
+    //            console.log('yellow');
+    //            break;
+    //        case 'green':
+    //            console.log('green');
+    //            break;
+    //        case 'blue':
+    //            console.log('blue');
+    //            break;
+    //        case 'indigo':
+    //            console.log('indigo');
+    //            break;
+    //        case 'violet':
+    //            console.log('violet');
+    //            break;
+    //    }
+    //}
+
+
 
     /**
      * TODO:
@@ -58,6 +102,8 @@
      * user to your `analyzeColor` function. Alert the return value from your
      * function to show it to the user.
      */
+
+
 
     /* ########################################################################## */
 
