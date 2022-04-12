@@ -66,7 +66,7 @@
       // } while(number <= 50);
 
       //for loop
-        for(var x= 0; x < 10, x++) {
+        for (var x= 0; x < 10, x++) {
             console.log(x + "for loop count")
         }
 
@@ -77,9 +77,27 @@
 
       //for loop exercise
 
-      for (var x = 0; x< 100; x %2){
-          console.log('x', x);
+      for (var x = 0; x <= 100; x++) {
+          var isDivisableBy2 = (x % 2 === 0);
+          var isDivisableBy5 = (x % 5 === 0);
+
+          if(isDivisableBy2 && isDivisableBy5) console.log('both')
+          if(isDivisableBy2 && !isDivisableBy5) console.log(x)
+          if(isDivisableBy5 && !isDivisableBy2) console.log(x)
       }
+
+
+        var total = 0;
+        for (var x = 0; x < 50; x++) {
+        total += x;
+        console.log('sub total', total);
+         }
+        console.log('total:', total);
+
+        // break and continue
+
+        var numberToBreakAt = 90;
+        var numberToContinueAt = 50;
 
 
     </script>
