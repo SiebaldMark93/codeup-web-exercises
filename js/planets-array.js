@@ -40,13 +40,24 @@
 
 
 
+    planets.forEach(function(planet){
+        console.log(planets[2])
+    })
 
+    console.log(planets)
     console.log('Finding and logging the index of "Earth" in the planets array.');
 
 
-    // console.log("Reversing the order of the planets array.");
-    // console.log(planets);
-    //
-    // console.log("Sorting the planets array.");
-    // console.log(planets);
+    planets.reverse();
+
+    console.log("Reversing the order of the planets array.");
+    console.log(planets);
+
+
+    planets.sort();
+
+    console.log("Sorting the planets array.");
+    console.log(planets);
+
+
 })();

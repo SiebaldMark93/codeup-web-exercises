@@ -110,10 +110,10 @@
         console.log(numbers[numbers.length-1])
     }
     logLast(numbers);
-
-    // function last(numbers) {
-    //     return numbers[numbers.length -1]
-    // }
+    function last(numbers) {
+        //     return numbers[numbers.length -1]
+        // }
+    //
 
 
 })();
