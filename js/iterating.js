@@ -1,4 +1,4 @@
-(function(){
+(function() {
     "use strict";
 
     /**
@@ -7,7 +7,7 @@
      * 'names'.
      */
 
-    // var names = ['Mark', 'Monica', 'Aiden', 'Jason'];
+    var names = ['Mark', 'Monica', 'Aiden', 'Jason'];
     // console.log(names);
 
 
@@ -19,6 +19,7 @@
 
     // var numberOfNames = names.length
     // console.log(numberOfNames);
+    // or use console.log(names.length);
 
 
     /**
@@ -32,19 +33,18 @@
     // }
 
 
-
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
 
-    //var names = ['Mark', 'Monica', 'Aiden', 'Jason'];
-    //for (var i= 0; i < names-1; i+=1) {
+    // var names = ['Mark', 'Monica', 'Aiden', 'Jason'];
+    // for (var i= 0; i < names.length; i+=1) {
     //    console.log(names[i]);
-    //}
-
-    //console.log(names);
+    // }
+    //
+    // console.log(names);
 
 
     /**
@@ -54,12 +54,11 @@
 
 
     // var names = ['Mark', 'Monica', 'Aiden', 'Jason'];
-    // names.forEach(function(element, index, array) {
-    //     console.log(element);
-    //     console.log(index);
+    // names.forEach(function(name, index, array) {
+    //     console.log(name);
+    //     // console.log(index);
     //     // console.log(array);
     // });
-
 
 
     /**
@@ -77,10 +76,17 @@
      */
 
     var numbers = [1, 2, 4, 5];
+
     function logFirst(numbers) {
         console.log(numbers[0]);
     }
+
     logFirst(numbers);
+
+    //function first(numbers) {
+    //  return numbers[0];
+    //}
+
 
 
     function logSecond(numbers) {
@@ -88,10 +94,26 @@
     }
     logSecond(numbers);
 
+    //function second(numbers) {
+    //  return numbers[1];
+    //}
+
+    //Final question
+
+    // function logLast(numbers) {
+    //     console.log(numbers[3]);
+    // }
+    // logLast(numbers);
+
 
     function logLast(numbers) {
-        console.log(numbers[3]);
+        console.log(numbers[numbers.length-1])
     }
     logLast(numbers);
+
+    // function last(numbers) {
+    //     return numbers[numbers.length -1]
+    // }
+
 
 })();
