@@ -53,12 +53,12 @@
      */
 
 
-    var names = ['Mark', 'Monica', 'Aiden', 'Jason'];
-    names.forEach(function(element, index, array) {
-        console.log(element);
-        console.log(index);
-        // console.log(array);
-    });
+    // var names = ['Mark', 'Monica', 'Aiden', 'Jason'];
+    // names.forEach(function(element, index, array) {
+    //     console.log(element);
+    //     console.log(index);
+    //     // console.log(array);
+    // });
 
 
 
@@ -76,9 +76,22 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
+    var numbers = [1, 2, 4, 5];
+    function logFirst(numbers) {
+        console.log(numbers[0]);
+    }
+    logFirst(numbers);
 
 
+    function logSecond(numbers) {
+        console.log(numbers[1])
+    }
+    logSecond(numbers);
 
 
+    function logLast(numbers) {
+        console.log(numbers[3]);
+    }
+    logLast(numbers);
 
 })();
