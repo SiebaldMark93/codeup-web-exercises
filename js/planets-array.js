@@ -39,10 +39,10 @@
     console.log(planets);
 
 
-
-    planets.forEach(function(planet){
-        console.log(planets[2])
-    })
+    console.log(planets.indexOf('Earth'));
+    // planets.forEach(function(planet){
+    //     console.log(planets[2])
+    // })
 
     console.log(planets)
     console.log('Finding and logging the index of "Earth" in the planets array.');
