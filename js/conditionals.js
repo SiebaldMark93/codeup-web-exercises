@@ -65,34 +65,34 @@
      * Comment out the code above, and refactor your function to use a switch-case statement
      */
 
-    //var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-    //var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
-    //function analyzeColor(colors) {
-    //    switch (colors) {
-    //        case 'red':
-    //            console.log('red');
-    //            break;
-    //        case 'orange':
-    //            console.log('orange');
-    //            break;
-    //        case 'yellow':
-    //            console.log('yellow');
-    //            break;
-    //        case 'green':
-    //            console.log('green');
-    //            break;
-    //        case 'blue':
-    //            console.log('blue');
-    //            break;
-    //        case 'indigo':
-    //            console.log('indigo');
-    //            break;
-    //        case 'violet':
-    //            console.log('violet');
-    //            break;
-    //    }
-    //}
+    function analyzeColor(colors) {
+        switch (colors) {
+            case 'red':
+                console.log('red');
+                break;
+            case 'orange':
+                console.log('orange');
+                break;
+            case 'yellow':
+                console.log('yellow');
+                break;
+            case 'green':
+                console.log('green');
+                break;
+            case 'blue':
+                console.log('blue');
+                break;
+            case 'indigo':
+                console.log('indigo');
+                break;
+            case 'violet':
+                console.log('violet');
+                break;
+        }
+    }
 
 
 
@@ -102,6 +102,12 @@
      * user to your `analyzeColor` function. Alert the return value from your
      * function to show it to the user.
      */
+
+   // var color = prompt('What color would you like?');
+   // alert(analyzerColor(color));
+
+
+
 
 
 
@@ -126,6 +132,12 @@
      * Test your function by passing it various values and checking for the expected
      * return value.
      */
+
+    var
+
+    function calculateTotal(luckyNumber, totalAmount) {
+      return calculateTotal()
+    }
 
     /**
      * TODO:
