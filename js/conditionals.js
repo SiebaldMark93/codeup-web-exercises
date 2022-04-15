@@ -133,7 +133,7 @@
      * return value.
      */
 
-    var
+
 
     function calculateTotal(luckyNumber, totalAmount) {
       return calculateTotal()
@@ -168,5 +168,22 @@
      * Can you refactor your code to use functions?
      * HINT: The way we prompt for a value could be improved
      */
+
+    let number = confirm('Would you like to enter a number?');
+    if (number) {
+        let userNumber =+ prompt('What number would you like?');
+    if (isNaN(userNumber)) {
+        alert('That is not a number.');
+    } else {
+        (userNumber % 2 === 0) ? alert('number is even'): alert('number is odd');
+        alert('your number plus 100 is' + (userNumber + 100));
+        (userNumber > 0) ? alert('number is positive') : alert('number is negative');
+    }
+
+    } else {
+        alert('You did not enter a number!');
+    }
+
+
 
 })();

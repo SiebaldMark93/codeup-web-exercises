@@ -39,7 +39,7 @@
 
  //Don't modify the following line, it generates a random number between 1 and 3
  //and stores it in a variable named random
-  // var random = Math.floor((Math.random() * 3) + 1);
+  var random = Math.floor((Math.random() * 3) + 1);
 
     /**
      * TODO:
@@ -61,17 +61,14 @@
      */
 
 
-    //function isTwo(number) {
-    //   return number === 2;
-    //}
-
-    //console.log(isTwo(1));
-    //console.log(isTwo(2));
-    //console.log(isTwo(3));
-
-   //var random = isTwo();
-
-   //console.log(isTwo('random'));
+    // function isTwo(num){
+    //     return num === 2;
+    // }
+    //
+    // console.log(isTwo(1));
+    // console.log(isTwo(2));
+    // console.log(isTwo(3));
+    // console.log("Random number is " + random + " " +isTwo(random));
 
     /**
      * TODO:
@@ -88,10 +85,11 @@
     function calculateTip(tipPercentage, totalBill) {
         return tipPercentage * totalBill;
     }
+    //
+    // console.log(calculateTip(0.20, 20))
+    // console.log(calculateTip(0.25, 25.50))
+    // console.log(calculateTip(0.15, 33.42))
 
-    console.log(calculateTip(0.20, 20));
-    console.log(calculateTip(0.25, 25.50));
-    console.log(calculateTip(0.15, 33.42));
 
     /**
      * TODO:
@@ -100,10 +98,11 @@
      * then display the dollar amount they should tip
      */
 
-    var bill = parseFloat(prompt('What was the total bill?'));
-    var tip = parseFloat(prompt('What percentage will you tip?'));
+    // let billTotal = prompt('What is your total bill?') /100;
+    // let tipPercentage = prompt('What percentage would you like to tip?');
+    // alert('You should tip' + " " + calculateTip(tipPercentage, billTotal) + "$");
 
-    alert(calculateTip(bill, tip));
+
 
     /**
      * TODO:
@@ -120,12 +119,10 @@
      * > applyDiscount(45.99, 0.12) // 40.4712
      */
 
-    function applyDiscount(beforeDiscount, discountPercentage) {
-        return beforeDiscount - (beforeDiscount * discountPercentage);
+    function applyDiscount(priceBeforeDiscount, discountPercentage) {
+        return priceBeforeDiscount - (priceBeforeDiscount * discountPercentage);
     }
 
-    console.log(applyDiscount(45.99, .12));
-    console.log(applyDiscount(100, .2));
-
+    console.log(applyDiscount(45.99, 0.12));
 
 })();
