@@ -12,12 +12,12 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-    var person = {
-        firstName: 'Mark',
-        lastName: 'Siebald'
-    };
-    console.log(person.firstName);
-    console.log(person.lastName);
+    // var person = {
+    //     firstName: 'Mark',
+    //     lastName: 'Siebald'
+    // };
+    // console.log(person.firstName);
+    // console.log(person.lastName);
 
 
     /**
@@ -30,11 +30,11 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    person.sayHello = function() {
-        console.log('Hello from ' + person.firstName + ' ' + person.lastName);
-    }
-
-    console.log(person.sayHello());
+    // person.sayHello = function() {
+    //     console.log('Hello from ' + person.firstName + ' ' + person.lastName);
+    // }
+    //
+    // console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -50,11 +50,23 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    shoppers.forEach(function(shopper) {
+        if (shopper.amount > 200) {
+            var discountAmount = shopper.amount * 0.12;
+        console.log(shopper.name + ' ' + 'your amount is $' + shopper.amount.toFixed(2) + ', and you get a discount of $' + discountAmount.toFixed(2) + ' and you pay $' + (shopper.amount - discountAmount).toFixed(2));
+        } else {
+        console.log(shopper.name + ' Your amount is $' + shopper.amount.toFixed(2) + 'you do not qualify for discount.');
+    }
+    });
+
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a

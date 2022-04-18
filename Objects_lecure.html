@@ -220,20 +220,20 @@
 
   // Arrays of Objects
 
-  var pets = [
-      {
-          givenName: 'Spot',
-          isDog: true
-      },
-      {
-          givenName: 'Max',
-          isDog: false
-      },
-      {
-          givenName: 'Goldy',
-          isDog: false
-      }
-  ];
+  // var pets = [
+  //     {
+  //         givenName: 'Spot',
+  //         isDog: true
+  //     },
+  //     {
+  //         givenName: 'Max',
+  //         isDog: false
+  //     },
+  //     {
+  //         givenName: 'Goldy',
+  //         isDog: false
+  //     }
+  // ];
 
   // change every pet's name to 'Bowser'
   // pets.forEach((function(pet) {
@@ -309,26 +309,52 @@
 
   // Assigning Functionality to an Object
 
-  // var user = {
-  //     givenName: 'Justin',
-  //     age: 25,
-  //     sayHello: function(input) {
-  //         console.log(input);
-  //     },
-  //     logAge: function() {
-  //         console.log(this.age);
-  //     },
-  //     getYounger: function() {
-  //         this.age = this.age - 1;
-  //     },
-  //     setAge: function(age) {
-  //         this.age = age;
-  //     }
-  //     // addProp: function(name, value) {
-  //     //     this.name = value;
-  //     // }
+  var user = {
+      givenName: 'Justin',
+      age: 25,
+      sayHello: function(input) {
+          console.log(input);
+      },
+      logAge: function() {
+          console.log(this.age);
+      },
+      getYounger: function() {
+          this.age = this.age - 1;
+      },
+      setAge: function(age) {
+          this.age = age;
+      }
+      // addProp: function(name, value) {
+      //     this.name = value;
+      // }
+  }
+
+  var dog = {
+    petname: 'Artemis',
+    age: 4,
+    bark: function() {
+      console.log('WOOF WOOF!');
+    },
+    eat: function(food) {
+      console.log('Dog is eating...' + food)
+    },
+    agePet: function() {
+      dog.age += 1   // can also use this.age
+    }
+  }
+  console.log(dog.age);
+  dog.agePet();
+  console.log(dog.age);
+
+  // dog.bark();
+  // dog.eat('steak');
+  // dog.eat('toy');
+  //
+  // dog.sayHello = function() {
+  //   console.log('Wagging tail and barking lightly');
   // }
   //
+  // dog.sayHello();
   // console.log(user);
 
   // user.sayHello('Hello, Titan!');
