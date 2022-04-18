@@ -82,6 +82,47 @@
      */
 
 
+    var books = [
+        {
+            title: 'Crescent City',
+           author: {firstName: 'Sarah',
+                    lastName: 'Maas'
+            }
+        },
+        {
+            title: ''
+            author: {firstName: ' ',
+                     lastName: ' '
+            }
+        },
+        {
+            title: ''
+            author: {
+                firstName: ' ',
+                lastName: ' '
+            }
+        },
+        {
+            title: ''
+            author: {
+                firstName: ' ',
+                lastName: ' '
+            }
+        },
+        {
+            title: ''
+            author: {
+                firstName: ' ',
+                lastName: ' '
+            }
+        },
+
+    ];
+
+    console.log(books[0].title);
+
+
+
 
 
 
