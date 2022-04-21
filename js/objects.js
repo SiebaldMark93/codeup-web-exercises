@@ -90,16 +90,16 @@
             }
         },
         {
-            title: ''
-            author: {firstName: ' ',
-                     lastName: ' '
+            title: 'Harr Potter',
+            author: {firstName: 'J.K',
+                     lastName: 'Rowling'
             }
         },
         {
-            title: ''
+            title: 'Lord of the Rings',
             author: {
-                firstName: ' ',
-                lastName: ' '
+                firstName: 'J.R.R.',
+                lastName: 'Tolkien'
             }
         },
         {

@@ -1,10 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Functions Practice</title>
 </head>
 <body>
-$END$
+
+<script>
+    "use strict";
+
+    // function isTrue(input) {
+    //     return (input == true);
+    // }
+    //
+    // console.log(isTrue(true));
+    // console.log(isTrue(false));
+    // console.log(isTrue(0));
+    // console.log(isTrue(null));
+    // console.log(isTrue('true'));
+    // console.log(isTrue('banana'));
+    // console.log(isTrue([1, 2]));
+
+    // function isFalse(input) {
+    //     return (input === false);
+    // }
+    //
+    // console.log(isFalse(false));
+    // console.log(isFalse(true));
+    // console.log(isFalse(0));
+    // console.log(isFalse(null));
+    // console.log(isFalse(""));
+    // console.log(isFalse("Banana"));
+    // console.log(isFalse([1, 2]));
+
+    // function not(input) {
+    //     return !input;
+    // }
+    //
+    // console.log(not(false));
+    // console.log(not(0));
+    // console.log(not(''));
+    // console.log(not(null));
+    // console.log(not(NaN));
+    // console.log(not(undefined));
+    // console.log(not(true));
+    // console.log(not('something'));
+    // console.log(not(Infinity));
+    // console.log(not(123));
+
+
+    // function addOne(inputNumber) {
+    //     if (typeof (inputNumber === 'number' || typeof (inputNumber === 'string'))) {
+    //         return parseFloat(inputNumber) + 1;
+    //     }
+    // }
+    //
+    // console.log(addOne(0));
+    // console.log(addOne(2));
+    // console.log(addOne(-5));
+    // console.log(addOne(5.789));
+    // console.log(addOne(Infinity));
+    // console.log(addOne("2"));
+    // console.log(addOne("0"));
+    // console.log(addOne("Banana"));
+    // console.log(addOne(true));
+    // console.log(addOne(NaN));
+
+    // function isEven(input) {
+    //     if (!isNaN(parseFloat(input))) {
+    //         return (input % 2 === 0);
+    //     } else {
+    //     } return false;
+    // }
+    //
+    //
+    // console.log(isEven(2));
+    // console.log(isEven(-8));
+    // console.log(isEven(0));
+    // console.log(isEven('42'));
+    // console.log(isEven(1));
+    // console.log(isEven('-3'));
+    // console.log(isEven(false));
+    // console.log(isEven('banana'));
+
+    function isIdentical(input1, input2) {
+        if (input1 === input2) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    console.log(isIdentical(3, 3));
+
+
+</script>
+
 </body>
 </html>
