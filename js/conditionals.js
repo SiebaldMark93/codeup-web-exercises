@@ -1,5 +1,5 @@
 "use strict";
-(function() {
+(function () {
 
     /* ########################################################################## */
 
@@ -43,21 +43,21 @@
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-   // var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-   // var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    // var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    // var randomColor = colors[Math.floor(Math.random() * colors.length)];
     /**
      * TODO:
      * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
      * You should see a different message every time you refresh the page
      */
 
-    //function analyzeColor(colors) {
-    //    if (colors === randomColor) {
-    //        return randomColor;
-    //    }
-    //}
-
-    //console.log(analyzeColor(randomColor));
+    // function analyzeColor(colors) {
+    //     if (colors === randomColor) {
+    //         return randomColor;
+    //     }
+    // }
+    //
+    // console.log(analyzeColor(randomColor));
 
 
     /**
@@ -68,32 +68,31 @@
     var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
     var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
-    function analyzeColor(colors) {
-        switch (colors) {
-            case 'red':
-                console.log('red');
-                break;
-            case 'orange':
-                console.log('orange');
-                break;
-            case 'yellow':
-                console.log('yellow');
-                break;
-            case 'green':
-                console.log('green');
-                break;
-            case 'blue':
-                console.log('blue');
-                break;
-            case 'indigo':
-                console.log('indigo');
-                break;
-            case 'violet':
-                console.log('violet');
-                break;
-        }
-    }
-
+    // function analyzeColor(colors) {
+    //     switch (colors) {
+    //         case 'red':
+    //             console.log('red');
+    //             break;
+    //         case 'orange':
+    //             console.log('orange');
+    //             break;
+    //         case 'yellow':
+    //             console.log('yellow');
+    //             break;
+    //         case 'green':
+    //             console.log('green');
+    //             break;
+    //         case 'blue':
+    //             console.log('blue');
+    //             break;
+    //         case 'indigo':
+    //             console.log('indigo');
+    //             break;
+    //         case 'violet':
+    //             console.log('violet');
+    //             break;
+    //     }
+    // }
 
 
     /**
@@ -103,12 +102,8 @@
      * function to show it to the user.
      */
 
-   // var color = prompt('What color would you like?');
-   // alert(analyzerColor(color));
-
-
-
-
+    // var color = prompt('What color would you like?');
+    // alert(analyzerColor(color));
 
 
     /* ########################################################################## */
@@ -136,8 +131,31 @@
 
 
     function calculateTotal(luckyNumber, totalAmount) {
-      return calculateTotal()
+        var discount;
+        switch (luckyNumber) {
+            case 0:
+                discount = "no discount";
+                return totalAmount - totalAmount * discount
+            case 1:
+                discount = .10;
+                return totalAmount - totalAmount * discount
+            case 2:
+                discount = .25;
+                return totalAmount - totalAmount * discount
+            case 3:
+                discount = .35;
+                return totalAmount - totalAmount * discount
+            case 4:
+                return totalAmount - totalAmount * discount
+                discount = .50;
+            case 5:
+                return 0
+                discount = "free";
+        }
     }
+
+    console.log(calculateTotal(4, 100));
+
 
     /**
      * TODO:
@@ -147,8 +165,15 @@
      * and alerts to display to the user what their lucky number was, what their
      * price before the discount was, and what their price after the discount is.
      */
-// Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+    // Generate
+    // a
+    // random
+    // number
+    // between
+    // 0
+    // and
+    // 6
+    // var luckyNumber = Math.floor(Math.random() * 6);
 
     /**
      * TODO:
@@ -169,21 +194,20 @@
      * HINT: The way we prompt for a value could be improved
      */
 
-    let number = confirm('Would you like to enter a number?');
-    if (number) {
-        let userNumber =+ prompt('What number would you like?');
-    if (isNaN(userNumber)) {
-        alert('That is not a number.');
-    } else {
-        (userNumber % 2 === 0) ? alert('number is even'): alert('number is odd');
-        alert('your number plus 100 is' + (userNumber + 100));
-        (userNumber > 0) ? alert('number is positive') : alert('number is negative');
-    }
-
-    } else {
-        alert('You did not enter a number!');
-    }
-
+    // let number = confirm('Would you like to enter a number?');
+    // if (number) {
+    //     let userNumber = +prompt('What number would you like?');
+    //     if (isNaN(userNumber)) {
+    //         alert('That is not a number.');
+    //     } else {
+    //         (userNumber % 2 === 0) ? alert('number is even') : alert('number is odd');
+    //         alert('your number plus 100 is' + (userNumber + 100));
+    //         (userNumber > 0) ? alert('number is positive') : alert('number is negative');
+    //     }
+    //
+    // } else {
+    //     alert('You did not enter a number!');
+    // }
 
 
 })();
