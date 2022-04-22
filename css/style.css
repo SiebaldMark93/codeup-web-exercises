@@ -1,9 +1,54 @@
 .fancy-header {
-    color: deeppink;
+    color: red;
     text-decoration: underline;
 }
 
 
+h1.fancy-header {
+    text-align: center;
+}
+
+h1 {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+body {
+    background-color: darkslategrey ;
+}
+
+body {
+    background-image: url("../img/light image.jpg");
+    background-right: no-repeat;
+    background-size: contain;
+
+}
+
+
+li {
+    list-style: square ;
+}
+
+#container, body {
+    font-family: "Comic Sans MS", cursive;
+}
+
+table {
+    font-size: 25px;
+}
+
+
+a:link {
+    color: navy;
+}
+
+a:visited {
+    color: darkorange;
+}
+
+a:hover {
+    color: mediumturquoise;
+}
 /*h1{*/
 /*    background-color: Blue;*/
 /*}*/
@@ -29,7 +74,5 @@
 /*    background-color: yellow;*/
 
 
-body ul {
-    font-family: "American Typewriter", Serif;
-}
+
 
