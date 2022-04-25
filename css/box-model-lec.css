@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+/*units of measurement
+
+pixels - px
+Ephemeral units - em (relative to font size of element)
+Root Ephemoral Units- rem (relative to font size of HTML Doc)
+percentage - % (percent of page)
+View Height - vh (ratio for viewport)
+View Width - vw (ration for viewport)
+
+ */
+
+.box {
+    background-color: forestgreen;
+    height: 300px;
+    width: 400px;
+    padding-inline: 10px 15px 20px 25px;
+    border: 10px solid hotpink;
+    margin: 50px;
+}
