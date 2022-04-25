@@ -6,6 +6,20 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 
+:root {
+    --bg-info: #CDDEFF;
+    --bg-success: #CFF3DA;
+    --bg-warning: #FCFBC9;
+    --bg-error:#FAD3D7;
+    --text-info: darkblue;
+    --text-success: #00622A;
+    --text-waring: #998826;
+    --text-error: #74001E;
+
+}
+
+
+
 div {
     width: 85%;
     height: 25px;
@@ -20,8 +34,8 @@ div {
 }
 
 .message-info {
-    color: darkblue;
-    background-color: #CDDEFF;
+    color: var(--text-info);
+    background-color: var(--bg-info);
 
 }
 
