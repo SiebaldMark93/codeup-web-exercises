@@ -6,21 +6,42 @@
 </head>
 <body>
 
-<input type="text" id="color"/>
-<button type="button" id="changeColor">Button</button>
+<!--<input type="text" id="color"/>-->
+<!--<button type="button" id="changeColor">Button</button>-->
+
+<!--<script>-->
+<!--    var button = document.getElementById('changeColor');-->
+<!--    var color = document.querySelector('#color');-->
+<!--    var body = document.querySelector('body');-->
+
+
+<!--    function changeColor(e) {-->
+<!--        body.style.backgroundColor = color.value-->
+<!--    }-->
+
+
+<!--    button.addEventListener('click', changeColor)-->
+<!--</script>-->
+
+
+<!--Warmup 05/13/22-->
+
+<p id="doubleSize">Double Size</p>
 
 <script>
-    var button = document.getElementById('changeColor');
-    var color = document.querySelector('#color');
-    var body = document.querySelector('body');
+    (function() {
+        var paragraph = document.querySelector('#doubleSize');
+
+        paragraph.addEventListener('dblclick', function (event) {
+            event.target.style.fontSize = '12px';
+            var fontSize = parseFloat(event.target.style.fontSize);
+            console.log(fontSize);
+            event.target.style.fontSize = (fontSize * 2) + 'px'
+        })
+    })();
 
 
-    function changeColor(e) {
-        body.style.backgroundColor = color.value
-    }
-
-
-    button.addEventListener('click', changeColor)
 </script>
+
 </body>
 </html>
