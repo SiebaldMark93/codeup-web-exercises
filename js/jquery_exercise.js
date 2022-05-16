@@ -7,16 +7,37 @@
 // });
 
 //Class Selectors
-$('.codeup').css("border", "1px solid red");
+// $('.codeup').css("border", "1px solid red");
+//
+// //Element Selectors
+// $('li').css('font-size', '20px');
+//
+// $('p')
+// $('hi')
+// $('li')
+//
+// alert($('h1').html());
+//
+// //Multiple Selectors
+// $('p, h1, li');
 
-//Element Selectors
-$('li').css('font-size', '20px');
+// Remove your custom jQuery code from previous exercises.
 
-$('p')
-$('hi')
-$('li')
+//     Add jQuery code that will change the background color of an h1 element when clicked.
+$('h1').click(function () {
+    $('h1').css("background-color", "blue")
+});
 
-alert($('h1').html());
+//     Make all paragraphs have a font size of 18px when they are double clicked.
+$('p').dblclick(function () {
+    $('p').css('font-size', '18px');
+});
 
-//Multiple Selectors
-$('p, h1, li');
+//     Set all li text color to red when the mouse is hovering; reset to black when it is not.
+
+$('li').hover(function () {
+    $('li').css('color', 'red')
+},
+    function () {
+    $(this).css('color', 'black');
+    })
