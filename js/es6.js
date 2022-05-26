@@ -94,7 +94,7 @@ let list = '<ul>';
 
 developers.forEach(function (developer) {
     for (let developer of developers) {
-        list += '<li>' + developer + '</li>';
+        list += `<li>${developer}</li>`;
     }
     list += '</ul>';
 });
