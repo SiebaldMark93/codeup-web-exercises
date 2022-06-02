@@ -12,6 +12,7 @@
 <div id="map" style="height: 50em; width: 50em"></div>
 
 <script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
 <script>
     mapboxgl.accessToken = MAPBOX_API_KEY
     const map = new mapboxgl.Map({
@@ -20,6 +21,21 @@
         center: [-96.808891, 32.779167], // starting position [lng, lat]
         zoom: 9 // starting zoom
     });
+
+
+    geocode("Fort Worth, Tx",MAPBOX_API_KEY).then(function (results) {
+        console.log(results);
+        map.setCenter(results);
+        map.setZoom(10);
+        var marker = new mapboxgl.Marker()
+            .setLngLat(results)
+            .addTo(map)
+        var popUP = new mapboxgl.Popup()
+            .setHTML("<p>Hello</p>")
+            .setLngLat(results)
+            .addTo(map)
+
+    })
 
 </script>
 
